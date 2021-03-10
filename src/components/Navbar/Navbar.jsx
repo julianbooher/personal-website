@@ -32,11 +32,16 @@ export default function Nav() {
   const navHeader = useSelector(state=> state.navHeader);
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const handleMenuClick = (event) => {
+  const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleMenuClick = (destination) => {
+    history.push(`/${destination}`)
     setAnchorEl(null);
   };
 
@@ -48,7 +53,7 @@ export default function Nav() {
                 edge="start" 
                 className={classes.menuButton} 
                 color="inherit" aria-label="menu"
-                onClick={handleMenuClick}
+                onClick={handleMenuOpen}
             >
             <MenuIcon />
             </IconButton>
@@ -59,9 +64,9 @@ export default function Nav() {
                 open={Boolean(anchorEl)}
                 onClose={handleMenuClose}
             >
-                <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-                <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-                <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+                <MenuItem onClick={()=>{handleMenuClick('home')}}>Home</MenuItem>
+                <MenuItem onClick={()=>{handleMenuClick('resume')}}>Resume</MenuItem>
+                <MenuItem onClick={()=>{handleMenuClick('projects')}}>Projects</MenuItem>
         </Menu>
           <Typography variant="h6" className={classes.title}>
             {navHeader}
