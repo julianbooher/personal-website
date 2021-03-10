@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
     HashRouter as Router,
     Route,
@@ -6,7 +6,8 @@ import {
     Switch,
   } from 'react-router-dom';
 
-import Navbar from '../Navbar/Navbar.jsx'
+import Navbar from '../Navbar/Navbar.jsx';
+import Home from '../Home/Home.jsx';
 
 import './App.css';
 
@@ -18,7 +19,12 @@ function App() {
         <Router>
             <div>
                 <Navbar />
+                <Switch>
+                    <Redirect exact from="/" to="/home" />
+                    <Route path="/home" component={Home}/>
 
+
+                </Switch>
             </div>
         </Router>
     );

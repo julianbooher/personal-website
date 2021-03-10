@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonAppBar() {
+export default function Nav() {
   const classes = useStyles();
   const history = useHistory();
   const navHeader = useSelector(state=> state.navHeader)
@@ -37,7 +37,7 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            News
+            {navHeader}
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
