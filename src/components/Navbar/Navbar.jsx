@@ -45,6 +45,10 @@ export default function Nav() {
     setAnchorEl(null);
   };
 
+  const handleEmail = () => {
+    window.location.href = `mailto:julianjbooher@gmail.com`
+  }
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -67,6 +71,8 @@ export default function Nav() {
                 <MenuItem onClick={()=>{handleMenuClick('home')}}>Home</MenuItem>
                 <MenuItem onClick={()=>{handleMenuClick('resume')}}>Resume</MenuItem>
                 <MenuItem onClick={()=>{handleMenuClick('projects')}}>Projects</MenuItem>
+                <MenuItem onClick={()=>{handleEmail()}}>Email Me!</MenuItem>
+                <MenuItem onClick={()=>{handleEmail()}}>Linkedin</MenuItem>
         </Menu>
           <Typography variant="h6" className={classes.title}>
             {navHeader}
