@@ -49,6 +49,11 @@ export default function Nav() {
     window.location.href = `mailto:julianjbooher@gmail.com`
   }
 
+  const handleLinkedIn = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -72,7 +77,7 @@ export default function Nav() {
                 <MenuItem onClick={()=>{handleMenuClick('resume')}}>Resume</MenuItem>
                 <MenuItem onClick={()=>{handleMenuClick('projects')}}>Projects</MenuItem>
                 <MenuItem onClick={()=>{handleEmail()}}>Email Me!</MenuItem>
-                <MenuItem onClick={()=>{handleEmail()}}>Linkedin</MenuItem>
+                <MenuItem onClick={()=> {handleLinkedIn('https://www.linkedin.com/in/julian-booher-794b6962/')}}>Linkedin</MenuItem>
         </Menu>
           <Typography variant="h6" className={classes.title}>
             {navHeader}
