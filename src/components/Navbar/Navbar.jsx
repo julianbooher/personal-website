@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
+// Custom Hook
+import useWindowSize from '../../hooks/useWindowSize';
+
 
 // Material UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -31,6 +34,7 @@ export default function Nav() {
   const history = useHistory();
   const navHeader = useSelector(state=> state.navHeader);
   const [anchorEl, setAnchorEl] = useState(null);
+  const size = useWindowSize();
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -58,14 +62,7 @@ export default function Nav() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-            <IconButton 
-                edge="start" 
-                className={classes.menuButton} 
-                color="inherit" aria-label="menu"
-                onClick={handleMenuOpen}
-            >
-            <MenuIcon />
-            </IconButton>
+
             <Menu
                 id="simple-menu"
                 anchorEl={anchorEl}
@@ -82,7 +79,17 @@ export default function Nav() {
           <Typography variant="h6" className={classes.title}>
             {navHeader}
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Typography variant="h6" className={classes.title}>
+            {size.width}
+          </Typography>
+          <IconButton 
+                edge="start" 
+                className={classes.menuButton} 
+                color="inherit" aria-label="menu"
+                onClick={handleMenuOpen}
+            >
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>
