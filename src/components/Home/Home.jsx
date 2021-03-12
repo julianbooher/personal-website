@@ -10,7 +10,7 @@ export default function Home() {
   
     return (
       <div>
-          <h1>Home Test</h1>
+          <h1>Home Test AWS</h1>
       </div>
     );
   }
