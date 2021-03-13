@@ -5,6 +5,8 @@ import { useHistory } from 'react-router-dom';
 // Custom Hook
 import useWindowSize from '../../hooks/useWindowSize';
 
+import MobileMenu from './MobileMenu.jsx'
+
 
 // Material UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,10 +14,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,21 +31,7 @@ export default function Nav() {
   const classes = useStyles();
   const history = useHistory();
   const navHeader = useSelector(state=> state.navHeader);
-  const [anchorEl, setAnchorEl] = useState(null);
   const size = useWindowSize();
-
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
-
-  const handleMenuClick = (destination) => {
-    history.push(`/${destination}`)
-    setAnchorEl(null);
-  };
 
   const handleEmail = () => {
     window.location.href = `mailto:julianjbooher@gmail.com`
@@ -62,34 +46,21 @@ export default function Nav() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-
-            <Menu
-                id="simple-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleMenuClose}
-            >
-                <MenuItem onClick={()=>{handleMenuClick('home')}}>Home</MenuItem>
-                <MenuItem onClick={()=>{handleMenuClick('resume')}}>Resume</MenuItem>
-                <MenuItem onClick={()=>{handleMenuClick('projects')}}>Projects</MenuItem>
-                <MenuItem onClick={()=>{handleEmail()}}>Email Me!</MenuItem>
-                <MenuItem onClick={()=> {handleLinkedIn('https://www.linkedin.com/in/julian-booher-794b6962/')}}>Linkedin</MenuItem>
-        </Menu>
           <Typography variant="h6" className={classes.title}>
             {navHeader}
           </Typography>
-          <Typography variant="h6" className={classes.title}>
-            {size.width}
-          </Typography>
-          <IconButton 
-                edge="start" 
-                className={classes.menuButton} 
-                color="inherit" aria-label="menu"
-                onClick={handleMenuOpen}
-            >
-            <MenuIcon />
-          </IconButton>
+
+        {size.width < 600 ? 
+        <MobileMenu handleEmail={handleEmail} handleLinkedIn={handleLinkedIn} />
+        :
+        <>
+        <Button onClick={()=> history.push('/home')}>Home</Button>
+        <Button onClick={()=> history.push('/resume')}>Resume</Button>
+        <Button onClick={()=> history.push('/projects')}>Projects</Button>
+        <Button onClick={()=>{handleLinkedIn('https://www.linkedin.com/in/julian-booher-794b6962/')}}>LinkedIn</Button>
+        <Button onClick={()=>{handleEmail()}}>Email</Button>
+        </>
+        }
         </Toolbar>
       </AppBar>
     </div>
