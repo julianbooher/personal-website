@@ -5,7 +5,14 @@ const projects = (state = [
         github: 'github.com/julianbooher',
         heroku: 'heroku.com',
 
-    }
+    },
+    {
+        name: 'test project',
+        description: 'test description',
+        github: 'github.com/julianbooher',
+        heroku: 'heroku.com',
+
+    },
 ]) => {
         return state;
   };
