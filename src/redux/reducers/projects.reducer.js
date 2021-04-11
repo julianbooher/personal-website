@@ -1,17 +1,19 @@
 const projects = (state = [
     {
-        name: 'test project',
-        description: 'test description',
+        name: 'Results Foundation Grant Application Portal',
+        description: 'Web Portal that allows charities to apply for funding from the Results Foundation. Administrative features give the director the ability to field and score applications.',
         github: 'github.com/julianbooher',
         heroku: 'heroku.com',
         image: '../../../images/applications_table.png'
 
     },
     {
-        name: 'test project',
+        name: 'jQuery Calculator',
         description: 'test description',
         github: 'github.com/julianbooher',
         heroku: 'heroku.com',
+        image: '../../../images/calculator.png'
+
 
     },
 ]) => {
