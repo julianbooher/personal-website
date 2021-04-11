@@ -17,7 +17,7 @@ export default function Projects() {
     return (
       <div>
           <h1>Projects Test</h1>
-          <Grid container spacing={3}>
+          <Grid container>
             {projects.map((project, i) => (
               <Grid item xs={12} md={3} key={i}>
                 <ProjectCard project={project} />

@@ -4,6 +4,7 @@ const projects = (state = [
         description: 'test description',
         github: 'github.com/julianbooher',
         heroku: 'heroku.com',
+        image: '../../../images/applications_table.png'
 
     },
     {

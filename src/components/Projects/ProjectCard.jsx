@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    margin: '1em',
   },
   media: {
     height: 250,
@@ -26,7 +27,7 @@ export default function ProjectCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image= ""
+          image={project.image}
           title="Contemplative Reptile"
         />
         <CardContent>
