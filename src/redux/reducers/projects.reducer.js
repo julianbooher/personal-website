@@ -9,7 +9,7 @@ const projects = (state = [
     },
     {
         name: 'jQuery Calculator',
-        description: 'test description',
+        description: 'Calculator with basic arithmetic functions.',
         github: 'github.com/julianbooher',
         heroku: 'heroku.com',
         image: '../../../images/calculator.png'
