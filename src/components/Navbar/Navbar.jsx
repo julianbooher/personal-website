@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  navButton: {
+    color: 'white'
+  },
 }));
 
 export default function Nav() {
@@ -54,11 +57,11 @@ export default function Nav() {
         <MobileMenu handleEmail={handleEmail} handleLinkedIn={handleLinkedIn} />
         :
         <>
-        <Button onClick={()=> history.push('/home')}>Home</Button>
-        <Button onClick={()=> history.push('/resume')}>Resume</Button>
-        <Button onClick={()=> history.push('/projects')}>Projects</Button>
-        <Button onClick={()=>{handleLinkedIn('https://www.linkedin.com/in/julian-booher-794b6962/')}}>LinkedIn</Button>
-        <Button onClick={()=>{handleEmail()}}>Email</Button>
+        <Button className={classes.navButton} onClick={()=> history.push('/home')}>Home</Button>
+        <Button className={classes.navButton} onClick={()=> history.push('/resume')}>Resume</Button>
+        <Button className={classes.navButton} onClick={()=> history.push('/projects')}>Projects</Button>
+        <Button className={classes.navButton} onClick={()=>{handleLinkedIn('https://www.linkedin.com/in/julian-booher-794b6962/')}}>LinkedIn</Button>
+        <Button className={classes.navButton} onClick={()=>{handleEmail()}}>Email</Button>
         </>
         }
         </Toolbar>
