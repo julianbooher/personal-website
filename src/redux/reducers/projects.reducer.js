@@ -8,6 +8,14 @@ const projects = (state = [
 
     },
     {
+        name: 'Rate Beer!',
+        description: `Web app that allows users to rate their favorite beers, or if their favorite beer or brewery doesn't exist in the database, they can submit it for admin approval.`,
+        github: 'https://github.com/julianbooher/cs50-final-project',
+        youtube: 'https://www.youtube.com/watch?v=EG-pEev0Fvk',
+        image: '../../../images/beer-rating.png'
+
+    },
+    {
         name: 'jQuery Calculator',
         description: 'Calculator with basic arithmetic functions.',
         github: 'github.com/julianbooher',

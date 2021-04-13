@@ -8,6 +8,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+// icons
+import { GrGithub, GrHeroku, GrYoutube } from 'react-icons/gr';
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 500 || '100%',
@@ -40,12 +43,15 @@ export default function ProjectCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small">
-          Share
-        </Button>
-        <Button size="small">
-          Learn More
-        </Button>
+        {project.github && 
+          <Button onClick={() => { window.open(`https://${project.github}`, '_blank')}}><GrGithub/></Button>
+        }
+        {project.heroku && 
+          <Button onClick={() => { window.open(`https://${project.heroku}`, '_blank')}}><GrHeroku/></Button>
+        }
+        {project.youtube && 
+          <Button onClick={() => { window.open(`https://${project.youtube}`, '_blank')}}><GrYoutube/></Button>
+        }
       </CardActions>
     </Card>
   );
