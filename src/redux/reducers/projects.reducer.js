@@ -23,11 +23,17 @@ const projects = (state = [
         image: '../../../images/match-thread.png'
     },
     {
-        name: 'jQuery Calculator',
-        description: 'Calculator with basic arithmetic functions. My first foray into building a server using express ',
-        github: 'https://github.com/julianbooher/jquery-server-side-calculator',
-        heroku: 'heroku.com',
-        image: '../../../images/calculator.png'
+        name: 'Movie Gallery',
+        description: 'Movie gallery application made with React. Allows the user to save their favorite movies in a database along with genres and details about the movie.',
+        github: 'https://github.com/julianbooher/movie-sagas',
+        image: '../../../images/movie-gallery.png'
+    },
+    {
+        name: 'Feedback Application',
+        description: 'Clone of the feedback application that Prime Digital Academy had us fill out every day. Allows the user to enter 1-10 numbered responses to the prompts and leave some comments.',
+        github: 'https://github.com/julianbooher/redux-feedback-loop',
+        image: '../../../images/feedback.png',
+        heroku: 'https://blooming-bastion-15235.herokuapp.com/#/'
     },
     {
         name: 'jQuery Calculator',
@@ -39,7 +45,7 @@ const projects = (state = [
     {
         name: 'jQuery Todo List',
         description: 'Todo list created with a javaScript/jQuery front end and an express back end with postgreSQL as the database. First application using postgreSQL.',
-        github: 'https://github.com/julianbooher/jquery-server-side-calculator',
+        github: 'https://github.com/julianbooher/weekend-sql-to-do-list',
         heroku: 'https://radiant-fjord-87008.herokuapp.com/',
         image: '../../../images/to-do-app.png'
     },
