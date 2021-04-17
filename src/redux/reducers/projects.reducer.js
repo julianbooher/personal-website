@@ -17,10 +17,10 @@ const projects = (state = [
     },
     {
         name: 'Match Thread',
-        description: 'Calculator with basic arithmetic functions. My first foray into building a server using express ',
-        github: 'https://github.com/julianbooher/jquery-server-side-calculator',
-        heroku: 'heroku.com',
-        image: '../../../images/calculator.png'
+        description: 'Multi user web application that allows the user to comment on the outcomes of soccer matches. Contains scores, fixture lists, player lists and player statistics.',
+        github: 'https://github.com/julianbooher/prime-solo-project',
+        heroku: 'https://shielded-garden-95577.herokuapp.com/#/home',
+        image: '../../../images/match-thread.png'
     },
     {
         name: 'jQuery Calculator',
@@ -33,15 +33,15 @@ const projects = (state = [
         name: 'jQuery Calculator',
         description: 'Calculator with basic arithmetic functions. My first foray into building a server using express ',
         github: 'https://github.com/julianbooher/jquery-server-side-calculator',
-        heroku: 'heroku.com',
+        heroku: 'https://gentle-atoll-31200.herokuapp.com/',
         image: '../../../images/calculator.png'
     },
     {
-        name: 'jQuery Calculator',
-        description: 'Calculator with basic arithmetic functions. My first foray into building a server using express.',
+        name: 'jQuery Todo List',
+        description: 'Todo list created with a javaScript/jQuery front end and an express back end with postgreSQL as the database. First application using postgreSQL.',
         github: 'https://github.com/julianbooher/jquery-server-side-calculator',
-        heroku: 'heroku.com',
-        image: '../../../images/calculator.png'
+        heroku: 'https://radiant-fjord-87008.herokuapp.com/',
+        image: '../../../images/to-do-app.png'
     },
 ]) => {
         return state;
