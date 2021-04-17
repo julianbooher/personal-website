@@ -2,7 +2,7 @@ const projects = (state = [
     {
         name: 'Results Foundation Grant Application Portal',
         description: 'Web Portal that allows charities to apply for funding from the Results Foundation. Administrative features give the director the ability to field and score applications.',
-        github: 'github.com/julianbooher',
+        github: 'https://github.com/julianbooher/project-finale',
         heroku: 'heroku.com',
         image: '../../../images/applications_table.png'
 
@@ -16,13 +16,32 @@ const projects = (state = [
 
     },
     {
-        name: 'jQuery Calculator',
-        description: 'Calculator with basic arithmetic functions.',
-        github: 'github.com/julianbooher',
+        name: 'Match Thread',
+        description: 'Calculator with basic arithmetic functions. My first foray into building a server using express ',
+        github: 'https://github.com/julianbooher/jquery-server-side-calculator',
         heroku: 'heroku.com',
         image: '../../../images/calculator.png'
-
-
+    },
+    {
+        name: 'jQuery Calculator',
+        description: 'Calculator with basic arithmetic functions. My first foray into building a server using express ',
+        github: 'https://github.com/julianbooher/jquery-server-side-calculator',
+        heroku: 'heroku.com',
+        image: '../../../images/calculator.png'
+    },
+    {
+        name: 'jQuery Calculator',
+        description: 'Calculator with basic arithmetic functions. My first foray into building a server using express ',
+        github: 'https://github.com/julianbooher/jquery-server-side-calculator',
+        heroku: 'heroku.com',
+        image: '../../../images/calculator.png'
+    },
+    {
+        name: 'jQuery Calculator',
+        description: 'Calculator with basic arithmetic functions. My first foray into building a server using express.',
+        github: 'https://github.com/julianbooher/jquery-server-side-calculator',
+        heroku: 'heroku.com',
+        image: '../../../images/calculator.png'
     },
 ]) => {
         return state;

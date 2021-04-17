@@ -44,13 +44,13 @@ export default function ProjectCard(props) {
       </CardActionArea>
       <CardActions>
         {project.github && 
-          <Button onClick={() => { window.open(`https://${project.github}`, '_blank')}}><GrGithub/></Button>
+          <Button onClick={() => { window.open(`${project.github}`, '_blank')}}><GrGithub/></Button>
         }
         {project.heroku && 
-          <Button onClick={() => { window.open(`https://${project.heroku}`, '_blank')}}><GrHeroku/></Button>
+          <Button onClick={() => { window.open(`${project.heroku}`, '_blank')}}><GrHeroku/></Button>
         }
         {project.youtube && 
-          <Button onClick={() => { window.open(`https://${project.youtube}`, '_blank')}}><GrYoutube/></Button>
+          <Button onClick={() => { window.open(`${project.youtube}`, '_blank')}}><GrYoutube/></Button>
         }
       </CardActions>
     </Card>
